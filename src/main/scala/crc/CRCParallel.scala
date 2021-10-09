@@ -19,7 +19,7 @@ class CRCParallel(k: Int, gx: Int) extends Module {
     val out = Output(UInt(r.W))
   })
 
-  var checkCode = Wire(0.U(r.W))
+  var checkCode = 0.U(r.W)
 
   var i = 0
   for (i <- 0 until k) {
