@@ -7,9 +7,9 @@ import chisel3.experimental.BundleLiterals._
 
 class TripleXorTest extends FreeSpec with ChiselScalatestTester {
   "Multiple Xor Functor should pass" in {
-    test(new TripleXor(3)) { dut =>
+    test(new TripleXor(16)) { dut =>
       var i = 0
-      for (i <- 0 to 7) {
+      for (i <- 0 until (1 << 16)) {
         dut.io.in.poke(i.U)
         var res = 0
         var ii = i
