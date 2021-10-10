@@ -1,7 +1,7 @@
 package crc
 
 object BinaryDiv {
-  private def getWidth(x: Int): Int = {
+  def getWidth(x: Int): Int = {
     var a: Int = 0
     var num = x
     while (num != 0) {
@@ -11,11 +11,11 @@ object BinaryDiv {
     return a
   }
 
-  private def getDigitByPosition(num: Int, pos: Int) = {
+  def getDigitByPosition(num: Int, pos: Int) = {
     (num >> pos) & 1
   }
 
-  private def getSeg(num: Int, lo: Int, hi: Int) = {
+  def getSeg(num: Int, lo: Int, hi: Int) = {
     val mask = ~((~0 >> (hi - lo + 1)) << (hi - lo + 1))
     (num >> lo) & mask
   }
