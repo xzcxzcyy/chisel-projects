@@ -18,7 +18,7 @@ class CRCParallel(k: Int, gx: Int) extends Module {
     val in = Input(UInt(k.W))
     val out = Output(UInt(r.W))
   })
-  // val table = new Array[List[Int]](r)
+  // new way
   val table = new Array[Bool](r)
   var i = 0
   
